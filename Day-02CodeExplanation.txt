@@ -1,0 +1,76 @@
+This is a CLI-based Inventory tracker program which was designed as part of my "30-Day Python Challenge." 
+This allows users to add new products, view existing products and update already exist products. 
+
+Explanation of the code:
+
+Function Definitions
+1. show_intro():
+   - This a Function to represent introduction of this assignment / Project. Starting with a little welcome message 
+      into inventory tracker program.
+
+2. add_product(name, quantity):
+   - This function takes Product Name (name) and Product Quantity (quantity) as a parameters.
+      Checks for products with specified quantity, If the product already exists it increments the quantity value which was specified.
+      If the product with quantity doesn't exists, It adds into it. 
+
+3. view_inventory():
+   - This function don't take any parameters.
+      It check for inventories in the inventory dictionary
+         If the inventory dictionary is empty it displays inventory is empty
+         If not (inventory isn't empty), iterates through the dictionary and displays the inventory name with quantity.
+
+Main Program Logic:-
+- The main() function is the entry point of the program.
+- It first calls show_intro() to display the welcome message.
+- It enters into a while loop to repeatedly prompt the user for input until user chooses to exit.
+  - Menu Options:
+    Menu provides the following options:
+    1. Add/Update Product:
+       - Asks the user for a product name and quantity.
+       - Checks if the entered quantity is a valid number or not using `isdigit()`.
+       - Calls add_product() if valid; otherwise, displays an error message.
+    2. View Inventory:
+       - Calls view_inventory() to display current inventory details.
+    3. Exit:
+       - Exits the loop by using break control and displays an exit message.
+  - If an invalid option is selected, it displays an error message.
+
+Execution:-
+- The program includes a conditional statement i.e if __name__ == "__main__": to ensure that main() is only called 
+   if this program is executed directly (not imported as a module).
+
+Key Concepts:-
+- Variables and Data Types: The program uses variable names like `inventory`, `name`, and `quantity`, 
+   representing basic data types like strings and integers.
+- Dictionary: The inventory is stored in a dictionary, which allows for storing key-value pairs 
+   and for efficient storage and retrieval of product quantities by name.
+- User Input: The script uses input functions to interact with users and validate their input.
+- Control Flow: It utilizes loops and conditionals to control program flow based on user choices.
+
+What I've learnt:
+   - I've learnt what a variable is, variable is a storage container or a memory location in computer to store a value by 
+      giving it a special and unique naming and sometimes the value may varies (That's why it is variable). And the value can used anywhere we want
+      in program.
+   - I've learnt naming rules in python, naming rules are specifically applied to variables to give names to memory locations where the values will 
+      store, some general naming rules are:
+         -> No variable name should start with numbers, eg: 1counter is invalid. Instead, counter1 is valid.
+         -> No variable name should start with a special characters, eg: @counter is invalid. Instead Counter is valid.
+         -> No variable name should contain spaces, eg: user choice is invalid. Instead user_choice is valid.
+         -> No variable name should be a python reserved / built-in keywords, eg: and (There are 33 built-in keywords in python).
+         -> Names are case sensitive, means abc ≠ Abc (means each one has its uniqueness, unique value and unique memory locations ).
+         -> A variable name may contain collection of special characters and numbers, i.e _Counter1.
+   - I've learnt datatypes in python, Datatypes are used to mention which type of data should a variable has to hold. In python we don't have to 
+      mention which datatype has to hold by a variable, by delecration time python can understand what type of data we've assigned to it. thats why
+      python is dynamically typed language.
+      In python we have 5 types of datatypes, i.e:
+      1, Numeric
+            integer
+            float
+            complex
+      2, Dictionary
+      3, Boolean
+      4, set 
+      5, sequence type
+            strings
+            list
+            tuple
